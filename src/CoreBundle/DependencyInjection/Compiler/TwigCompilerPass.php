@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * @author Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
- * @deprecated since sonata-project/core-bundle 3.19, to be removed in 4.0.
+ * @deprecated since sonata-project/core-bundle 3.x, to be removed in 4.0.
  */
 class TwigCompilerPass implements CompilerPassInterface
 {
@@ -32,63 +32,63 @@ class TwigCompilerPass implements CompilerPassInterface
 
     public function registerFlashAliases(ContainerBuilder $container)
     {
-        $flashManagerAlias = $container
+        $container
             ->setAlias('sonata.core.flashmessage.manager', 'sonata.twig.flashmessage.manager')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.flashmessage.manager" instead.'
             );
 
-        $flashRuntimeAlias = $container
+        $container
             ->setAlias('sonata.core.flashmessage.twig.runtime', 'sonata.twig.flashmessage.twig.runtime')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.flashmessage.twig.runtime" instead.'
             );
 
-        $flashExtensionAlias = $container
+        $container
             ->setAlias('sonata.core.flashmessage.twig.extension', 'sonata.twig.flashmessage.twig.extension')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.flashmessage.twig.extension" instead.'
             );
     }
 
     public function registerTwigAliases(ContainerBuilder $container)
     {
-        $extensionWrapping = $container
+        $container
             ->setAlias('sonata.core.twig.extension.wrapping', 'sonata.twig.extension.wrapping')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.extension.wrapping" instead.'
             );
 
-        $runtimeStatus = $container
+        $container
             ->setAlias('sonata.core.twig.status_runtime', 'sonata.twig.status_runtime')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.status_runtime" instead.'
             );
 
-        $extensionDeprecatedTemplate = $container
+        $container
             ->setAlias('sonata.core.twig.deprecated_template_extension', 'sonata.twig.deprecated_template_extension')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.deprecated_template_extension" instead.'
             );
 
-        $extensionTemplate = $container
+        $container
             ->setAlias('sonata.core.twig.template_extension', 'sonata.twig.template_extension')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.template_extension" instead.'
             );
     }
 

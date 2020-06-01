@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * @author Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
- * @deprecated since sonata-project/core-bundle 3.19, to be removed in 4.0.
+ * @deprecated since sonata-project/core-bundle 3.x, to be removed in 4.0.
  */
 class FormCompilerPass implements CompilerPassInterface
 {
@@ -32,95 +32,95 @@ class FormCompilerPass implements CompilerPassInterface
 
     public function registerDateAliases(ContainerBuilder $container)
     {
-        $momentFormatConventerAlias = $container
+        $container
             ->setAlias('sonata.core.date.moment_format_converter', 'sonata.form.date.moment_format_converter')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.date.moment_format_converter" instead.'
             );
     }
 
     public function registerFormTypeAlias(ContainerBuilder $container)
     {
-        $arrayTypeAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.array', 'sonata.form.type.array')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.array" instead.'
             );
 
-        $boolenTypeAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.boolean', 'sonata.form.type.boolean')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.boolean" instead.'
             );
 
-        $collectionTypeAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.collection', 'sonata.form.type.collection')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.collection" instead.'
             );
 
-        $dateRangeAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.date_range', 'sonata.form.type.date_range')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.date_range" instead.'
             );
 
-        $datetimeRangeAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.datetime_range', 'sonata.form.type.datetime_range')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.datetime_range" instead.'
             );
 
-        $datePickerAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.date_picker', 'sonata.form.type.date_picker')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.date_picker" instead.'
             );
 
-        $datetimePickerAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.datetime_picker', 'sonata.form.type.datetime_picker')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.datetime_picker" instead.'
             );
 
-        $dateRangePickerAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.date_range_picker', 'sonata.form.type.date_range_picker')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.date_range_picker" instead.'
             );
 
-        $datetimeRangePickerAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.datetime_range_picker', 'sonata.form.type.datetime_range_picker')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.datetime_range_picker" instead.'
             );
 
-        $equalTypeAlias = $container
+        $container
             ->setAlias('sonata.core.form.type.equal', 'sonata.form.type.equal')
             ->setPublic(true)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.form.type.equal" instead.'
             );
     }
 
