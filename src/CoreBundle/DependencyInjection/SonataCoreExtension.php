@@ -96,7 +96,6 @@ EOT
         $loader->load('core.xml');
         $loader->load('form_types.xml');
         $loader->load('model_adapter.xml');
-        $loader->load('validator.xml');
         $loader->load('twig.xml');
 
         if (!isset($bundles['SonataFormBundle'])) {

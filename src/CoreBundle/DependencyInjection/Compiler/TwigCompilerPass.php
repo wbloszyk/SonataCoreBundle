@@ -27,6 +27,7 @@ class TwigCompilerPass implements CompilerPassInterface
     {
         $this->registerFlashAliases($container);
         $this->registerTwigAliases($container);
+        $this->registerSlugifyAliases($container);
         $this->forceUserToMoveConfig($container);
     }
 
@@ -68,6 +69,14 @@ class TwigCompilerPass implements CompilerPassInterface
             );
 
         $runtimeStatus = $container
+            ->setAlias('sonata.core.twig.status_extension', 'sonata.twig.status_extension')
+            ->setPublic(true)
+            ->setDeprecated(
+                true,
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.status_extension" instead.'
+            );
+
+        $container
             ->setAlias('sonata.core.twig.status_runtime', 'sonata.twig.status_runtime')
             ->setPublic(true)
             ->setDeprecated(
@@ -89,6 +98,17 @@ class TwigCompilerPass implements CompilerPassInterface
             ->setDeprecated(
                 true,
                 'The "%service_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "%alias_id%" instead.'
+            );
+    }
+
+    public function registerSlugifyAliases(ContainerBuilder $container)
+    {
+        $container
+            ->setAlias('sonata.core.slugify.cocur', 'sonata.twig.slugify.cocur')
+            ->setPublic(true)
+            ->setDeprecated(
+                true,
+                'The "%alias_id%" service is deprecated since sonata-project/core-bundle 3.19 and will be removed in 4.0. Use "sonata.twig.slugify.cocur" instead.'
             );
     }
 
